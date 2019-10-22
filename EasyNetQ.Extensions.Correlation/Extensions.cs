@@ -6,7 +6,7 @@ using Microsoft.Extensions.Logging;
 namespace EasyNetQ.Extensions.Correlation
 {
     /// <summary>
-    /// Extensions for EasyNetQ for working with correlation across requests.
+    /// Extensions for EasyNetQ for exchange with correlation data with messages.
     /// </summary>
     public static class Extensions
     {
