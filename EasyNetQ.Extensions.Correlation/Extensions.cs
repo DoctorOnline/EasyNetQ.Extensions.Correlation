@@ -49,7 +49,7 @@ namespace EasyNetQ.Extensions.Correlation
         }
 
         /// <summary>
-        /// Subscribe to get a message from a message bus with a correlation identifier.
+        /// Subscribe to getting messages from a message bus with a correlation identifier.
         /// </summary>
         public static ISubscriptionResult SubscribeAsync<T>(
             this IBus messageBus,
@@ -81,7 +81,8 @@ namespace EasyNetQ.Extensions.Correlation
                 message => ReceiveMessageAsync(message, onRecievedMessage, onRecievedCorrelationId, logger)
             );
         }
-      
+
+        /// <summary />
         private static async Task ReceiveMessageAsync<T>(
             CorrelationMessage<T> message,
             Func<T, Task> onRecievedMessage,
